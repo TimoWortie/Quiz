@@ -27,7 +27,7 @@ public class FileReader {
                 // you have to close it (if it's not done automatically).
                 // If you open in a try-catch-block, always close it in the finally-block,
                 // which is always executed
-                br.close();
+				br.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
