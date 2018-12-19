@@ -127,7 +127,7 @@ public class Gui extends JFrame implements ActionListener {
 				showEndScreen();
 			}
 		} else if (e.getSource().equals(upload)) {
-			//Hier Score und Name hochladen
+			// Hier Score und Name hochladen
 			label.setText("Score hochgeladen");
 			upload.setEnabled(false);
 		} else if (e.getSource().equals(restart)) {

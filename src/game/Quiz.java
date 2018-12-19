@@ -65,9 +65,9 @@ public class Quiz {
 		}
 		Collections.shuffle(answers);
 		for (int i = 0; i < buttons.length; i++) {
-			if(answers.get(i).getContent().length()>6){
-				buttons[i] = new QuestionButton("<html><body><br>"+answers.get(i).getContent()+"</body></html>");
-			}else{
+			if (answers.get(i).getContent().length() > 6) {
+				buttons[i] = new QuestionButton("<html><body><br>" + answers.get(i).getContent() + "</body></html>");
+			} else {
 				buttons[i] = new QuestionButton(answers.get(i).getContent());
 			}
 			buttons[i].setAlignmentY(SwingConstants.CENTER);
