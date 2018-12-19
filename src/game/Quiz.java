@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import javax.swing.JButton;
+import javax.swing.SwingConstants;
 
 import io.FileReader;
 import question.Answer;
@@ -20,7 +21,7 @@ public class Quiz {
 		FileReader reader = new FileReader();
 		List<String> lines = reader.readFileLines(path);
 		for (String line : lines) {
-			String[] split = line.split(";");
+			String[] split = line.split("\t");
 			Question question = new Question(split[0]);
 			for (int i = 1; i < split.length; i++) {
 				String[] answer = split[i].split("_");
@@ -59,11 +60,17 @@ public class Quiz {
 		Question q = getNextQuestion();
 		QuestionButton[] buttons = new QuestionButton[4];
 		ArrayList<Answer> answers = q.getAnswers();
-		if (answers.size() < 4) {
+		if (answers.size() != 4) {
 			throw new NullPointerException();
 		}
+		Collections.shuffle(answers);
 		for (int i = 0; i < buttons.length; i++) {
-			buttons[i] = new QuestionButton(answers.get(i).getContent());
+			if(answers.get(i).getContent().length()>6){
+				buttons[i] = new QuestionButton("<html><body><br>"+answers.get(i).getContent()+"</body></html>");
+			}else{
+				buttons[i] = new QuestionButton(answers.get(i).getContent());
+			}
+			buttons[i].setAlignmentY(SwingConstants.CENTER);
 			buttons[i].setStatus(answers.get(i).getStatus());
 		}
 		return buttons;

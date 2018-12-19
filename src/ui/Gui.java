@@ -23,8 +23,17 @@ public class Gui extends JFrame implements ActionListener {
 	private JTextField nameInput;
 	private String name;
 	private int score = 0;
+	private JButton restart, upload;
 
 	public Gui() {
+		buildGui();
+
+	}
+
+	private void buildGui() {
+		score = 0;
+		name = "";
+
 		label = new JLabel("Enter a name and press Start to start", SwingConstants.CENTER);
 		label.setBounds(50, 300, 300, 50);
 
@@ -41,10 +50,10 @@ public class Gui extends JFrame implements ActionListener {
 		getContentPane().add(start);
 		getContentPane().add(label);
 		getContentPane().add(nameInput);
-
+		this.repaint();
 	}
 
-	public void loadGame() {
+	private void loadGame() {
 		start.setEnabled(false);
 		start.setVisible(false);
 		nameInput.setEnabled(false);
@@ -56,7 +65,7 @@ public class Gui extends JFrame implements ActionListener {
 
 	}
 
-	public void loadNextQuestion() {
+	private void loadNextQuestion() {
 		answers = new QuestionButton[4];
 		answers = quiz.getButtons();
 		answers[0].setBounds(50, 300, 150, 50);
@@ -69,12 +78,31 @@ public class Gui extends JFrame implements ActionListener {
 		}
 
 		getContentPane().remove(label);
-		label = new JLabel(quiz.getCurrentQuestionText(), SwingConstants.CENTER);
-		label.setBounds(50, 150, 300, 80);
+		label = new JLabel("<html><body><br>" + quiz.getCurrentQuestionText() + "</body></html>",
+				SwingConstants.CENTER);
+		label.setBounds(50, 100, 300, 150);
 		label.setFont(new Font("DialogInput", Font.BOLD, 20));
 		getContentPane().add(label);
 
 		this.repaint();
+	}
+
+	private void showEndScreen() {
+		nextQuestion.setVisible(false);
+		nextQuestion.setEnabled(false);
+		getContentPane().remove(nextQuestion);
+		for (int i = 0; i < answers.length; i++) {
+			getContentPane().remove(answers[i]);
+		}
+		label.setText("Name: " + name + ", Score: " + score);
+		restart = new JButton("Neues Spiel");
+		restart.setBounds(100, 300, 200, 50);
+		restart.addActionListener(this);
+		upload = new JButton("Upload Score");
+		upload.setBounds(100, 350, 200, 50);
+		upload.addActionListener(this);
+		getContentPane().add(restart);
+		getContentPane().add(upload);
 	}
 
 	@Override
@@ -96,8 +124,17 @@ public class Gui extends JFrame implements ActionListener {
 				nextQuestion.setEnabled(false);
 				getContentPane().remove(nextQuestion);
 			} else {
-				System.out.println(score);
+				showEndScreen();
 			}
+		} else if (e.getSource().equals(upload)) {
+			//Hier Score und Name hochladen
+			label.setText("Score hochgeladen");
+			upload.setEnabled(false);
+		} else if (e.getSource().equals(restart)) {
+			getContentPane().remove(restart);
+			getContentPane().remove(label);
+			getContentPane().remove(upload);
+			buildGui();
 		} else {
 			for (int i = 0; i < answers.length; i++) {
 				if (e.getSource().equals(answers[i])) {
