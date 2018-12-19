@@ -4,13 +4,20 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import org.json.JSONException;
+
+import db.DatabaseHandler;
+import db.Score;
 import game.QuestionButton;
 import game.Quiz;
 
@@ -22,8 +29,9 @@ public class Gui extends JFrame implements ActionListener {
 	private JLabel label;
 	private JTextField nameInput;
 	private String name;
-	private int score = 0;
 	private JButton restart, upload;
+	private int score;
+	private JTable table;
 
 	public Gui() {
 		buildGui();
@@ -127,13 +135,38 @@ public class Gui extends JFrame implements ActionListener {
 				showEndScreen();
 			}
 		} else if (e.getSource().equals(upload)) {
-			// Hier Score und Name hochladen
+			DatabaseHandler db = new DatabaseHandler();
+			try {
+				db.postScoreToUrl(new Score(name, score));
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+			ArrayList<Score> scores = null;
+			try {
+				scores = db.readJsonFromUrl();
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			} catch (JSONException e1) {
+				e1.printStackTrace();
+			}
+			String[] columnNames = { "Name", "Score" };
+			String[][] rowData = new String[scores.size()][2];
+			for (int i = 0; i < scores.size(); i++) {
+				rowData[i][0] = scores.get(i).getName();
+				rowData[i][1] = String.valueOf(scores.get(i).getScore());
+			}
+			table = new JTable(rowData, columnNames);
+			table.setEnabled(false);
+			table.setBounds(100, 50, 200, 200);
+			getContentPane().add(table);
+			label.setBounds(50, 250, 300, 50);
 			label.setText("Score hochgeladen");
 			upload.setEnabled(false);
 		} else if (e.getSource().equals(restart)) {
 			getContentPane().remove(restart);
 			getContentPane().remove(label);
 			getContentPane().remove(upload);
+			getContentPane().remove(table);
 			buildGui();
 		} else {
 			for (int i = 0; i < answers.length; i++) {
