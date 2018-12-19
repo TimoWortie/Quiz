@@ -1,3 +1,30 @@
-Hallo;1_false;2_true;3_false
-
-
+Wenn das Wetter gut ist, wird der Bauer bestimmt den Eber, das Ferkel und...?	einen draufmachen_false	die Nacht durchzechen_false	die Sau rauslassen_true	auf die Kacke hauen_false
+Welche Gegenstaende koennen in den Geschichten des Orient fliegen?	Haeuser_false	Muenzen_false	Tische_false	Teppiche_true
+Welche Figur wurde von Karl May erschaffen?	Asterix_false	Winnetou_true	Pluto_false	Pater Brown_false
+Welches Tier kann seine Hautfarbe an seine Umgebung anpassen?	Ringelnatter_false	Chamaeleon_true	Waldkautz_false	Ameisenbaer_false
+Wovor fuerchtet sich der Autobesitzer?	Ventiltrinker_false	Kolbenfresser_true	Reifenmuemmler_false	Schaltungsmampfer_false
+Wie nennt man die Mitte eines Tornados?	Nase_false	Mund_false	Auge_true	Ohr_false
+Was saegen Max und Moritz voller Tuecke an, um dem Schneider Boeck einen Streich zu spielen?	Stuhlbein_false	Leiter_false	Bruecke_true	Krueckstock_false
+Wen brauchen viele Parasiten zum ueberleben?	Kneipier_false	Wirt_true	Oberkellner_false	Barkeeper_false
+Wie heisst eine religioese Staette des Judentums in Jerusalem?	Trauermauer_false	Klagemauer_true	Tempelmauer_false	Schlossmauer_false
+Ein beruehmter Hurricane der in New Orleans wuetete heisst?	Melissa_false	Catrina_true	Josephine_false	Mariah_false
+Was ist Red Snapper?	Fisch_true	Hunderasse_false	Cocktail_false	Film_false
+Welche Sprache sprach Jesus?	Hebraeisch_false	Griechisch_false	Assyrisch_false	Aramaeisch_true
+Was ist Gondwana?	Ein Maedchenname_false	Ein Land_false	Eine Insel_false	Ein Urkontinent_true
+Wer gilt als Vater der Medizin?	Hippokrates_true	Rene Lennec_false	Thomas Dydenhams_false	Santorio_false
+Was ist ein Teil des Gehirns?	Temporal-schwamm_false	Temporallappen_true	Tempolumpen_false	Geschwindigkeitslappen_false
+Welches Land wurde am haeufigsten Fussballweltmeister?	Brasilien_true	Italien_false	Deutschland_false	Frankreich_false
+Aus wie viele Buechern besteht die Bibel?	66_true	666_false	53_false	103_false
+Welches Gebirge trennt Europa und Asien?	Alpen_false	Himalaya_false	Appalachen_false	Ural_true
+Wie heisst die Meerenge zwischen Daenemark und Norwegen?	Kittekatt_false	Kattegatt_false	Skagerrak_true	Gelenkknack_false
+Welchen Boxer hat Mike Tyson das Ohr abgebissen?	Lennox Lewis_false	Evander Holyfield_true	Tony Bellew_false	Buster Douglas_false
+Welchen Vogel hat die Lufthansa als Kennzeichen?	Spatz_false	Kranich_true	Adler_false	Taube_false
+Was ist die noerdlichste Hauptstadt in Europa?	Moskau_false	Koppenhangen_false	London_false	Reykjavik_true
+Was ist die suedlichste Hauptstadt in Europa?	Ankara_false	Rom_false	Berlin_false	Valetta_true
+In welchem US-Bundesstaat liegt der Grand Canyon?	Arizona_true	Florida_false	Illinois_false	Oregon_false
+Wer war der erste Zar von Russland?	Juri der Grosse_false	Vladimir der Babar_false	Dennis_false	Iwan der Schreckliche_true
+In welchem Land liegt die hoechstgelegene Eisenbahnstation Europas?	Oesterreich_false	Deutschland_false	Schweiz_true	Italien_false
+Wie viel Liter Bier werden in Deutschland pro Kopf jaehrlich getrunken?	100L_true	75L_false	125L_false	80L_false
+Wer hat Jesus Verraten?	Dieter_false	Moses_false	Judas_true	Petrus_false
+Welcher Schauspieler verdiente in 2017 am meisten?	Dwayne Johnson_true	Tom Cruise_false	Kevin Hart_false	Angelina Jolie_false
+Wo befindet sich die Arena Madison Square Garden?	Toronto_false	Los Angeles_false	New York_true	Chicago_false

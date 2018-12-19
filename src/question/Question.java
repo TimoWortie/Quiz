@@ -3,23 +3,27 @@ package question;
 import java.util.ArrayList;
 
 public class Question {
-	private String content;
+	private String text;
 	private ArrayList<Answer> answers = new ArrayList();
 
 	public Question(String content) {
-		this.content = content;
+		this.text = content;
 	}
 
 	public void addAnswer(Answer answer) {
 		answers.add(answer);
 	}
 
-	public String getContent() {
-		return content;
+	public String getText() {
+		return text;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public ArrayList<Answer> getAnswers() {
+		return answers;
+	}
+
+	public void setText(String content) {
+		this.text = content;
 	}
 
 }
