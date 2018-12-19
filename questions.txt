@@ -1,4 +1,4 @@
-Wenn das Wetter gut ist, wird der Bauer bestimmt den Eber, das Ferkel und...?	einen draufmachen_false	die Nacht durchzechen_false	die Sau rauslassen_true	aud die Kacke hauen_false
+Wenn das Wetter gut ist, wird der Nauer bestimmt den Eber, das Ferkel und...?	einen draufmachen_false	die Nacht durchzechen_false	die Sau rauslassen_true	aud die Kacke hauen_false
 Welche Gegenstaende koennen in den Geschichten des Orient fliegen?	Haeuser_false	Muenzen_false	Tische_false	Teppiche_true
 Welche Figur wurde von Karl May erschaffen?	Asterix_false	Winnetou_true	Pluto_false	Pater Brown_false
 Welches Tier kann seine Hautfarbe an seine Umgebung anpassen?	Ringelnatter_false	Chamaeleon_true	Waldkautz_false	Ameisenbaer_false
